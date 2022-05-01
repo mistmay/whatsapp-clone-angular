@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MessagesService } from 'src/app/services/messages.service';
 
 @Component({
   selector: 'app-sidebard-header',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 export class SidebardHeaderComponent implements OnInit {
   name!: string | null;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private messagesService: MessagesService) { }
 
   ngOnInit(): void {
     if (localStorage.getItem("name")) {
@@ -22,6 +23,8 @@ export class SidebardHeaderComponent implements OnInit {
   logout(): void {
     localStorage.removeItem('name');
     localStorage.removeItem('token');
+    this.messagesService.messageList = [];
+    this.messagesService.messageObservable.next(this.messagesService.messageList);
     this.router.navigate(['/login']);
   }
 
