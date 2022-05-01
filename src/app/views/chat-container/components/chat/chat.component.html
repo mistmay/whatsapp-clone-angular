@@ -1,0 +1,8 @@
+<div class="w-100 h-100" id="chat-container">
+  <div *ngIf="showChat; else chatPlaceholder" class="w-100 h-100">
+    <app-chat-proper class="w-100 h-100" [message]="messageToPass"></app-chat-proper>
+  </div>
+</div>
+<ng-template #chatPlaceholder>
+  <app-chat-placeholder class="w-100 h-100"></app-chat-placeholder>
+</ng-template>

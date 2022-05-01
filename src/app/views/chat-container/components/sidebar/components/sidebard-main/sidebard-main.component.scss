@@ -1,0 +1,71 @@
+#no-conversations {
+  padding-top: 30px;
+  color: #b9b9b9;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+#conversations-container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.conversation {
+  height: 67px;
+  padding: 0 10px;
+  cursor: pointer;
+
+  app-avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .content {
+    width: calc(100% - 48px);
+    border-bottom: 1px solid #f2f2f2;
+    padding: 13px;
+
+    .name {
+      color: #040404;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 10ch;
+    }
+
+    .time {
+      color: #979797;
+      font-size: 13px;
+      padding-top: 2px;
+    }
+
+    .message {
+      color: #717171;
+      font-size: 13px;
+      padding-top: 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      span {
+        max-width: calc(100% - 18px);
+      }
+
+      svg {
+        width: 18px;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: rgba(#ccc, 0.2);
+  }
+}
+
+.fill-blue {
+  fill: rgba(71, 169, 242, 255);
+}
+
+.fill-grey {
+  fill: #9a9a9a;
+}

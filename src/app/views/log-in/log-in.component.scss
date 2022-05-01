@@ -1,0 +1,22 @@
+#form-container {
+  background-color: #e7dfdc;
+
+  form {
+    border-radius: 10px;
+    border: 1px solid lightgray;
+
+    input {
+      border-radius: 5px;
+      border: 1px solid lightgray;
+      outline: none;
+      padding: 5px;
+      text-align: center;
+    }
+
+    button {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

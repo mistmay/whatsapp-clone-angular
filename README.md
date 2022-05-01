@@ -1,3 +1,7 @@
+WhatsApp Clone made with Angular, Bootstrap, Scss, Html and Typescript.
+I used Api https://dummyjson.com/comments .
+and for the Emoji service, I used ngx-emoji-mart
+
 # WhatsupClone
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.

@@ -1,0 +1,17 @@
+#sidebar {
+  border-right: 1px solid #e1e4e5;
+
+  app-sidebard-header {
+    height: 67px;
+  }
+
+  app-sidebar-search {
+    height: 50px;
+  }
+
+  app-sidebard-main {
+    height: calc(100% - 67px - 50px);
+    width: 100%;
+  }
+
+}
